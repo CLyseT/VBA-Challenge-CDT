@@ -12,3 +12,7 @@ Inserted new code to extract data from all worksheets.
 Worksheets are now updated with the ws code for all worksheets
 
 Worksheets also now include interior color index for the combined data
+
+Please note there are two codes that were run on the worksheets.
+Screenshot includes individual loop for data AND combined loop using the "Next Cell" code and Loop Code.
+(screenshot on github screen only includes the individual loop, please download or pull to review all data requested and/or to view the the entied screenshot.
