@@ -1,0 +1,112 @@
+Attribute VB_Name = "Module3"
+'Module 1 - Year 2015
+
+Sub ticker_loop()
+Dim i As Double
+For i = 2 To 760192
+Cells(i, 9).Value = Cells(i, 1).Value
+Next i
+End Sub
+
+Sub year_change_loop()
+Dim i As Double
+Dim Total As Double
+
+For i = 2 To 760192
+Total = Cells(i, 3).Value - Cells(i, 6).Value
+Cells(i, 10).Value = Total
+Next i
+End Sub
+
+Sub percent_change_loop()
+Dim i As Double
+Dim Percent As Double
+
+For i = 2 To 760192
+Percent = Cells(i, 10).Value / Cells(i, 3).Value
+Cells(i, 11).Value = Percent
+Next i
+End Sub
+
+Sub stock_volume_loop()
+Dim i As Long
+
+For i = 2 To 760192
+Cells(i, 12).Value = Cells(i, 7).Value
+Next i
+End Sub
+
+' Module 3 Ð Year 2014
+
+Sub ticker_loop()
+Dim i As Double
+For i = 2 To 705714
+Cells(i, 9).Value = Cells(i, 1).Value
+Next i
+End Sub
+
+Sub year_change_loop()
+Dim i As Double
+Dim Total As Double
+
+For i = 2 To 705714
+Total = Cells(i, 3).Value - Cells(i, 6).Value
+Cells(i, 10).Value = Total
+Next i
+End Sub
+
+Sub percent_change_loop()
+Dim i As Double
+Dim Percent As Double
+
+For i = 2 To 705714
+Percent = Cells(i, 10).Value / Cells(i, 3).Value
+Cells(i, 11).Value = Percent
+Next i
+End Sub
+
+Sub stock_volume_loop()
+Dim i As Long
+
+For i = 2 To 705714
+Cells(i, 12).Value = Cells(i, 7).Value
+Next i
+End Sub
+
+' Module 2 - 2016
+
+Sub ticker_loop()
+Dim i As Double
+For i = 2 To 797711
+Cells(i, 9).Value = Cells(i, 1).Value
+Next i
+End Sub
+
+Sub year_change_loop()
+Dim i As Double
+Dim Total As Double
+
+For i = 2 To 797711
+Total = Cells(i, 3).Value - Cells(i, 6).Value
+Cells(i, 10).Value = Total
+Next i
+End Sub
+
+Sub percent_change_loop()
+Dim i As Double
+Dim Percent As Double
+
+For i = 2 To 797711
+Percent = Cells(i, 10).Value / Cells(i, 3).Value
+Cells(i, 11).Value = Percent
+Next i
+End Sub
+
+Sub stock_volume_loop()
+Dim i As Long
+
+For i = 2 To 797711
+Cells(i, 12).Value = Cells(i, 7).Value
+Next i
+End Sub
+

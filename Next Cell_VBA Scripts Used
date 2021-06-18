@@ -1,0 +1,72 @@
+Attribute VB_Name = "Module2"
+Sub multiple_Year_Stock()
+
+For Each ws In Worksheets
+
+Dim Ticker As String
+Dim YearDifference As Long
+Dim Percentage As Double
+Dim Volume As String
+YearDifference = 0
+Percentage = 0
+Volume = 0
+
+Dim Summary_Table_Row As Integer
+Summary_Table_Row = 2
+
+LastRow = ws.Cells(ws.Rows.Count, 9).End(xlUp).Row
+
+For i = 2 To LastRow
+If ws.Cells(i + 1, 9).Value <> ws.Cells(i, 9).Value Then
+Ticker = ws.Cells(i, 9).Value
+YearDifference = YearDifference + ws.Cells(i, 10).Value
+Percentage = Percentage + ws.Cells(i, 11).Value
+Volume = Volume + ws.Cells(i, 12).Value
+ws.Range("N" & Summary_Table_Row).Value = Ticker
+ws.Range("O" & Summary_Table_Row).Value = YearDifference
+ws.Range("P" & Summary_Table_Row).Value = Percentage
+ws.Range("Q" & Summary_Table_Row).Value = Volume
+Summary_Table_Row = Summary_Table_Row + 1
+YearDifference = 0
+Percentage = 0
+Volume = 0
+
+Else
+YearDifference = YearDifference + ws.Cells(i, 10).Value
+Percentage = Percentage + ws.Cells(i, 11).Value
+Volume = Volume + ws.Cells(i, 12).Value
+End If
+
+Next i
+
+Next ws
+
+End Sub
+
+Sub Format()
+For Each ws In Worksheets
+
+Dim Yealy As Double
+
+FormatLastRow = ws.Cells(ws.Rows.Count, 14).End(xlUp).Row
+
+For i = 2 To FormatLastRow
+If (ws.Cells(i, 15).Value < 0) Then
+ws.Cells(i, 14).Interior.ColorIndex = 3
+ws.Cells(i, 15).Interior.ColorIndex = 3
+ws.Cells(i, 16).Interior.ColorIndex = 3
+ws.Cells(i, 17).Interior.ColorIndex = 3
+ElseIf (ws.Cells(i, 15).Value >= 0) Then
+ws.Cells(i, 14).Interior.ColorIndex = 4
+ws.Cells(i, 15).Interior.ColorIndex = 4
+ws.Cells(i, 16).Interior.ColorIndex = 4
+ws.Cells(i, 17).Interior.ColorIndex = 4
+End If
+
+Next i
+
+Next ws
+
+End Sub
+
+
