@@ -1,7 +1,8 @@
 # VBA-Challenge-CDT
 
-Updated 6/18/21 - Review marked as incomplete due to missing scripts.  Added scripts to respository with name "Next Cell" and Individual Loop" VBA scripts used.  Please advise that they have been added with terminal view because current excel version does not allow for scripts to be saved with excel format.
+Updated 6/18/21 - Reviewer marked as incomplete due to missing scripts.  Added scripts to respository with name "Next Cell" and Individual Loop" VBA scripts used.  Please advise that they have been added with terminal view because current excel version does not allow for scripts to be saved with excel format.
 
+---------------------------------------------------------------------------------------------------------------------------
 
 6/7/21 - Initial 
 The VBA of Wall Street Data 
